@@ -36,4 +36,4 @@ cp .env.example .env   # Set VITE_API_URL
 npm run dev
 ```
 
-Open http://localhost:5173 in your browser.
+Open https://task-management-system-six-theta.vercel.app in your browser.
