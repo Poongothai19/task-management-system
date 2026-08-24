@@ -1,3 +1,96 @@
+# Task Management System
+
+A full-stack Task Management application built with **Node.js + Express + MongoDB** (backend) and **React.js** (frontend).
+
+🔗 Live Demo: https://task-management-system-six-theta.vercel.app
+📦 GitHub Repo: https://github.com/Poongothai19/task-management-system
+
+---
+
+## Features
+
+- JWT Authentication (Register / Login / Logout)
+- Create, Read, Update, Delete Tasks
+- Filter by Status & Search by Title
+- Pagination & Sorting (API)
+- Dark / Light Theme Toggle
+- Responsive Design with Lucide Icons
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, Vite, Axios, Lucide React |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas with Mongoose |
+| Auth | JWT + bcryptjs |
+
+---
+
+## Task 1: Backend Development (Node.js + Express.js)
+
+RESTful API built with Express.js and MongoDB (Mongoose) implementing:
+- Create Task
+- Update Task
+- Delete Task
+- Get Task by ID
+- Get All Tasks
+- Filter Tasks by Status
+
+Includes input validation, centralized error handling, environment variable configuration, JWT authentication (bonus), and pagination & sorting (bonus).
+
+**API Endpoints:**
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| POST | /api/tasks | Create a new task |
+| GET | /api/tasks | Get all tasks (supports `?status=`, `?search=`, `?page=`, `?limit=`, `?sort=`) |
+| GET | /api/tasks/:id | Get a task by ID |
+| PUT | /api/tasks/:id | Update a task |
+| DELETE | /api/tasks/:id | Delete a task |
+
+---
+
+## Task 2: Frontend Development (React.js)
+
+Responsive React UI implementing:
+- Dashboard displaying all tasks
+- Add / Edit / Delete Task
+- Filter Tasks by Status
+- Search Tasks by Title
+
+Built with functional components, React Hooks, Axios for API integration, form validation, and loading/error states. Bonus: Dark/Light theme toggle.
+
+---
+
+## Getting Started
+
+### Backend
+```bash
+cd backend
+npm install
+cp .env.example .env   # Fill in MONGO_URI and JWT_SECRET
+npm run dev
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+cp .env.example .env   # Set VITE_API_URL
+npm run dev
+```
+
+
+## Task 3: Database & Query Assessment
+
+Assumed collections:
+
+Users { UserId, Name, Email }
+Tasks { TaskId, UserId, Title, Status, DueDate }
+
 
 **1. Retrieve all tasks assigned to a specific user**
 ```js
